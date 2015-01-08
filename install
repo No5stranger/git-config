@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+/usr/bin/env git clone http://githug.com/No5stranger/git-config.git /tmp/
+if [ -f $HOME/.gitconfig ]
+then
+    mv $HOME/.gitconfig $HOME/.gitconfig.bak
+fi
+cp /tmp/git-config/gitconfig $HOME/.gitconfig
