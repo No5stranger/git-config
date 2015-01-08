@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-/usr/bin/env git clone http://github.com/No5stranger/git-config.git /tmp/
+/usr/bin/env git clone http://github.com/No5stranger/git-config.git /tmp/git-config
 if [ -f $HOME/.gitconfig ]
 then
     mv $HOME/.gitconfig $HOME/.gitconfig.bak
