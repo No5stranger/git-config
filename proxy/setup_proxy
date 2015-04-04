@@ -8,8 +8,8 @@ cp connect /usr/local/bin/
 
 echo '>---------- setup proxy ----------<'
 cd ../../
-cp ./socks5proxywrapper /usr/local/bin/
-cp ./socks5proxyssh /usr/local/bin/
+cp ./socks5proxywrapper /usr/bin/
+cp ./socks5proxyssh /usr/bin/
 
 echo '>---------- setup gitconfig ----------<'
 if [ -f $HOME/.gitconfig ]
