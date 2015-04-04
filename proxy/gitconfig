@@ -1,0 +1,8 @@
+[core]
+    gitproxy = /usr/bin/socks5proxywrapper
+[http]
+    proxy = socks5://127.0.0.1:1085
+[https]
+    proxy = socks5://127.0.0.1:1085
+[url "https://"]
+    insteadOf = git://

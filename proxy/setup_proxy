@@ -1,0 +1,23 @@
+#!/bin/sh
+echo '>---------- unzip file ----------<'
+cd ./source
+unzip connect.zip
+cd ./gotoh-connect-dc5de2343be3
+gcc connect.c -o connect
+cp connect /usr/local/bin/
+
+echo '>---------- setup proxy ----------<'
+cd ../../
+cp ./socks5proxywrapper /usr/bin/
+cp ./socks5proxyssh /usr/bin/
+
+echo '>---------- setup gitconfig ----------<'
+if [ -f $HOME/.gitconfig ]
+then
+    cat ./gitconfig >> $HOME/.gitconfig 
+else 
+    cp ./gitconfig $HOME/.gitconfig
+fi
+
+echo '>---------- clean file ----------<'
+rm -rf ./source/gotoh-connect-dc5de2343be3
