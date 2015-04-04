@@ -1,0 +1,3 @@
+#!/bin/sh
+ssh -o ProxyCommand="/usr/bin/socks5proxywrapper %h %p" "$@"
+
